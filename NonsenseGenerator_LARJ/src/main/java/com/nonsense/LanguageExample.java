@@ -188,10 +188,12 @@ public class LanguageExample {
         }
         i = 0;
         while (i < v) {
-            if (tempo == 4) {
+            if (tempo == 4 && verbs.get(i) != "is" && verbs.get(i) != "were") {
                 sentence = sentence.replaceFirst("\\[verb\\]", "will " + verbs.get(i));
-            } else {
-                sentence = sentence.replaceFirst("\\[verb\\]", verbs.get(i));
+            }else if(tempo == 2){
+            	sentence = sentence.replaceFirst("\\[verb\\]", verbs.get(i));
+            }else {
+                sentence = sentence.replaceFirst("\\[verb\\]", "will be");
             }
             i++;
         }
