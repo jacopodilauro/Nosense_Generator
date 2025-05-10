@@ -188,62 +188,66 @@ public class LanguageExample {
         }
         i = 0;
         while (i < v) {
-            if (tempo == 4 && verbs.get(i) != "is" && verbs.get(i) != "were") {
-                sentence = sentence.replaceFirst("\\[verb\\]", "will " + verbs.get(i));
-            }else if(tempo == 2){
-            	sentence = sentence.replaceFirst("\\[verb\\]", verbs.get(i));
-            }else {
-                sentence = sentence.replaceFirst("\\[verb\\]", "will be");
-            }
-            i++;
+    String verb = verbs.get(i);
+    if (tempo == 4) {
+        if (verb.equals("is") || verb.equals("are")) {
+            sentence = sentence.replaceFirst("\\[verb\\]", "will be");
+        } else {
+            sentence = sentence.replaceFirst("\\[verb\\]", "will " + verb);
         }
-        i = 0;
-        while (i < a) {
-            sentence = sentence.replaceFirst("\\[adjective\\]", adjectives.get(i));
-            i++;
-        }
-        System.out.println(sentence);
-        // Salva la frase generata in un file .txt
-        try (java.io.FileWriter writer = new java.io.FileWriter("output_sentence.txt", true)) { // true = append
-            writer.write(sentence + "\n");
-            System.out.println("\nFrase salvata in 'output_sentence.txt'");
-        } catch (IOException e) {
-            System.err.println("\nErrore durante il salvataggio della frase: " + e.getMessage());
-        }
-
-
-        //frase scurrile o no
-        double soglia = 0.5;
-
-        try (LanguageServiceClient language = LanguageServiceClient.create()) {
-            Document moderationDoc = Document.newBuilder()
-                    .setContent(sentence)
-                    .setType(Document.Type.PLAIN_TEXT)
-                    .build();
-
-            ModerateTextRequest moderationRequest = ModerateTextRequest.newBuilder()
-                    .setDocument(moderationDoc)
-                    .build();
-
-            ModerateTextResponse moderationResponse = language.moderateText(moderationRequest);
-
-            List<ClassificationCategory> filtered = new ArrayList<>();
-            for (ClassificationCategory category : moderationResponse.getModerationCategoriesList()) {
-                if (category.getConfidence() > soglia) {
-                    filtered.add(category);
-                }
-            }
-
-            if (filtered.isEmpty()) {
-                System.out.println("\n✅ Nessun contenuto problematico rilevato.");
-            } else {
-                System.out.println("\n⚠️ Contenuto potenzialmente sensibile rilevato (sopra la soglia):");
-                for (ClassificationCategory category : filtered) {
-                    System.out.printf("- Categoria: %s (confidenza: %.2f)\n", category.getName(), category.getConfidence());
-                }
-            }
-        }
-
-
+    } else {
+        sentence = sentence.replaceFirst("\\[verb\\]", verb);
     }
+    i++;
 }
+i = 0;
+
+            while (i < a) {
+                sentence = sentence.replaceFirst("\\[adjective\\]", adjectives.get(i));
+                i++;
+            }
+            System.out.println(sentence);
+            // Salva la frase generata in un file .txt
+            try (java.io.FileWriter writer = new java.io.FileWriter("output_sentence.txt", true)) { // true = append
+                writer.write(sentence + "\n");
+                System.out.println("\nFrase salvata in 'output_sentence.txt'");
+            } catch (IOException e) {
+                System.err.println("\nErrore durante il salvataggio della frase: " + e.getMessage());
+            }
+
+
+            //frase scurrile o no
+            double soglia = 0.00;
+
+            try (LanguageServiceClient language = LanguageServiceClient.create()) {
+                Document moderationDoc = Document.newBuilder()
+                        .setContent(sentence)
+                        .setType(Document.Type.PLAIN_TEXT)
+                        .build();
+
+                ModerateTextRequest moderationRequest = ModerateTextRequest.newBuilder()
+                        .setDocument(moderationDoc)
+                        .build();
+
+                ModerateTextResponse moderationResponse = language.moderateText(moderationRequest);
+
+                List<ClassificationCategory> filtered = new ArrayList<>();
+                for (ClassificationCategory category : moderationResponse.getModerationCategoriesList()) {
+                    if (category.getConfidence() > soglia) {
+                        filtered.add(category);
+                    }
+                }
+
+                if (filtered.isEmpty()) {
+                    System.out.println("\n✅ Nessun contenuto problematico rilevato.");
+                } else {
+                    System.out.println("\n⚠️ Contenuto potenzialmente sensibile rilevato (sopra la soglia):");
+                    for (ClassificationCategory category : filtered) {
+                        System.out.printf("- Categoria: %s (confidenza: %.2f)\n", category.getName(), category.getConfidence());
+                    }
+                }
+            }
+
+
+        }
+    }
