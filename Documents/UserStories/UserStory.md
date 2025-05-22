@@ -13,59 +13,72 @@
 **Description**: *As a user*, *I want* the generated sentence to be automatically checked for toxicity, *so that* I can ensure the generated content is appropriate for all users.
 
 **Acceptance Criteria**:
-- After sentence generation, the system uses Google Cloud’s `moderateText` API to evaluate toxicity.
-- Toxicity results are clearly displayed.
-- If the sentence is classified as toxic, a clear notification is shown.
+- Given a system-generated sentence, when the system detects toxicity above a predefined threshold, then the user is notified that the sentence is potentially toxic. 
+- Given a system-generated sentence, when the sentence is below the toxicity threshold, then the system allows its use without any toxicity warning.
+- Given a generated sentence, if it is considered toxic it lists its characteristics.
+- The toxicity check of the sentence is done automatically without additional input.
+
 
 ---
 
 ## Epic: Sentence Processing
 
-### 3. SCRUM-2 - Sentence Syntactic Analysis  
+### 2. SCRUM-2 - Sentence Syntactic Analysis  
 **Description**: *As a user*, *I want* to input a sentence and obtain a detailed syntactic analysis, *so that* I can clearly understand the grammatical structure of the sentence.
 
 **Acceptance Criteria**:
-- The user can input any English sentence.
-- The system uses Google Cloud’s `analyzeSyntax` API to process the sentence.
-- Nouns, verbs, and adjectives are extracted and displayed separately.
+- Given a user who enters a sentence, after sending the sentence, it divides it into [nouns], [verbs], [adjectives].
+- For example, once the sentence "The dog is on the white table.", is entered, it is divided into Nouns: dog, table | Verbs: is | Adjectives: white.
+- The sentence is written inside a text box and the analysis begins after sending or after clicking the button.
+- The system accurately identifies POS tags for common English grammatical structures.
 
-### 4. SCRUM-11 - Verb Tense Selection  
+### 3. SCRUM-11 - Verb Tense Selection  
 **Description**: *As a user*, *I want* to choose whether the generated sentence should be in past, present, or future tense, *so that* the sentence fits the desired time frame.
 
 **Acceptance Criteria**:
-- The user can select past, present, or future tense.
-- Verbs are correctly conjugated based on the chosen tense.
-- The sentence maintains temporal grammatical consistency.
+- Given the sentence generation interface, when the user selects 'Past Tense', then the subsequently generated sentence's main verb(s) are conjugated in a past tense.
+- Given the sentence generation interface, when the user selects 'Present Tense', then the subsequently generated sentence's main verb(s) are conjugated in a present tense.
+- Given the sentence generation interface, when the user selects 'Future Tense', then the subsequently generated sentence's main verb(s) are conjugated in a future tense.
+- By default the verb tense is the present.
+- The interface must clearly show the available tense options through a drop-down menu.
 
 ---
 
 ## Epic: Sentence Generation & Dictionary
 
-### 5. SCRUM-3 - Customizable Internal Dictionary  
+### 4. SCRUM-3 - Customizable Internal Dictionary  
 **Description**: *As a user*, *I want* to be able to add terms to the internal dictionaries (nouns, verbs, adjectives), *so that* they can be reused in future sentence generations.
 
 **Acceptance Criteria**:
-- Before initial analysis, the system proposes adding the newly identified terms to internal dictionaries.
-- The user confirms the addition.
-- In subsequent sentence generations, the new terms are effectively available and used.
+- The system allows the addition of terms such as nouns, adjectives and verbs to the dictionary that will be used in the creation of the correct templates.
+- It shows a button menu that allows the writing of the term and sending.
+- After sending, the various terms are saved in the corresponding ready-to-use dictionaries.
+- The various subdivisions are shown, for example: writing "Dog" in the text box and sending, it will be added to the dictionary (Noun).
+- The system prevents duplicate terms, warning with a banner.
+- Once the term has been inserted, a banner must notify me that the operation was successful.
 
-### 6. SCRUM-4 - Random Generation of Nonsense Sentences  
+### 5. SCRUM-4 - Random Generation of Nonsense Sentences  
 **Description**: *As a user*, *I want* the system to generate grammatically correct random sentences using predefined templates, *so that* I can explore creative linguistic combinations in a fun and useful way.
 
 **Acceptance Criteria**:
-- The system randomly chooses a template from the available templates (e.g., "The [noun] [verb] the [adjective] [noun].") with more than 100 templates.
-- The system uses extracted terms from the initial sentence, adding random terms from internal dictionaries if needed.
-- The generated sentence is grammatically correct and clearly displayed to the user.
+- Generate a grammatically correct sentence with the chosen or random template.
+- Given custom words have been added to the dictionary, when sentences are generated using templates that can accommodate those word types, then these custom words can appear in the generated sentences.
+- A drop-down menu is displayed that allows the choice of templates, at least 100.
+- The system includes templates capable of generating sentences of varying complexity, including some templates that result in sentences with multiple clauses or more than [10] words.
 
 ---
 
 ## Epic: Design
 
-### 7. SCRUM-10 - Design Interface  
+### 6. SCRUM-10 - Design Interface  
 **Description**: *As a user*, *I want* the interface to have a modern and intuitive design, *so that* I can navigate and use the web application efficiently and enjoyably.
 
 **Acceptance Criteria**:
-- The UI follows modern design principles.
-- Color scheme and visual elements are consistent and visually appealing.
-- Tooltips or guidance are available for new users to understand features quickly.
+- The design must be consistent (same color palette and tone) across all pages.
+- The different buttons must be identical or similar.
+- Error messages are clear, easy to understand, prominently placed near the cause of the error and, where possible, suggest corrective actions.
+- There must be a minimum of animation when a button is covered. For example "color change from blue to light blue".
+
+
+![BackLogSpr1](images/BackLogSprint1.png)
 
