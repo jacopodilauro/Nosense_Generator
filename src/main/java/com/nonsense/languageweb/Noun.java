@@ -6,7 +6,7 @@
  * Each instance of {@code Noun} stores one randomly chosen noun from the list.
  */
 
-package com.nonsense;
+package com.nonsense.languageweb;
 
 import java.io.IOException;
 import java.nio.file.Files;
