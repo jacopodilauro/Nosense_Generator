@@ -198,6 +198,23 @@ public class NonsenseApplication {
             String sentenceOut = TemplateFiller.fill(templateToUse, nouns, verbs, adjectives, tense, pastTenseVerbs);
             html.append("<h2>Generated Nonsense Sentence:</h2><pre class='generated-sentence'>" + escapeHtml(sentenceOut) + "</pre>");
 
+            // <<< INIZIO CODICE MODIFICATO PER SCRIVERE SU output.txt >>>
+            if (sentenceOut != null && !sentenceOut.isBlank()) {
+                try (FileWriter fw = new FileWriter("output.txt", true); // true per append mode
+                     BufferedWriter bw = new BufferedWriter(fw);
+                     PrintWriter outWriter = new PrintWriter(bw)) {
+                    outWriter.println(sentenceOut);
+                    // Puoi aggiungere un log sulla console del server se vuoi, per debug
+                    System.out.println("Frase salvata su output.txt: " + sentenceOut);
+                } catch (IOException e) {
+                    // Gestisci l'eccezione, ad esempio loggandola o mostrando un messaggio all'utente
+                    System.err.println("Errore durante la scrittura su output.txt: " + e.getMessage());
+                    // Potresti anche aggiungere un messaggio all'HTML per l'utente
+                    html.append("<p class='error-message'>Errore nel salvataggio della frase su output.txt: " + escapeHtml(e.getMessage()) + "</p>");
+                }
+            }
+            // <<< FINE CODICE MODIFICATO PER SCRIVERE SU output.txt >>>
+
             // Content moderation
             try (LanguageServiceClient language = LanguageServiceClient.create()) {
                 Document modDoc = Document.newBuilder()
