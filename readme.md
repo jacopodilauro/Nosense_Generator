@@ -9,7 +9,7 @@ The project is organized into the following directories:
 
 * `src/`: Contains all the Java source code for the application.
 * `test/`: Houses the unit tests to ensure the application's functionality.
-* `Documenti/`: Provides detailed documentation, including user manuals and technical specifications.
+* `Documents/`: Provides detailed documentation, including user manuals and technical specifications.
 * `pom.xml`: The Maven Project Object Model file, which manages the project's dependencies and build process.
 
 ## Requirements
