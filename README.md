@@ -20,7 +20,7 @@ To set up and run the Nonsense Generator, ensure you have the following installe
 * Java Development Kit (JDK) 17 or higher. You can check your version by running `java -version` in your terminal.
 * Maven 3.6+. Verify your installation with `mvn -v`.
 
-### Setting Environment Variables
+## Setting Environment Variables
 In the terminal, ensuring you are in the project's root directory, run the following command:
 * **Command prompt - CMD**:
   ```bash
