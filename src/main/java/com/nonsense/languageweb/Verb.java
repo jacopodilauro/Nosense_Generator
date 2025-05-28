@@ -1,11 +1,3 @@
-/**
- * The {@code Verb} class represents a randomly selected verb from a file.
- * <p>
- * Verbs are loaded from the file {@code verbs.txt}, where each line contains a single verb.
- * The list is loaded only once and shared across all instances for performance.
- * Each instance of {@code Verb} stores one randomly chosen verb from the list.
- */
-
 package com.nonsense.languageweb;
 
 import java.io.IOException;
@@ -14,6 +6,13 @@ import java.nio.file.Paths;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * The {@code Verb} class represents a randomly selected verb from a file.
+ * <p>
+ * Verbs are loaded from the file {@code verbs.txt}, where each line contains a single verb.
+ * The list is loaded only once and shared across all instances for performance.
+ * Each instance of {@code Verb} stores one randomly chosen verb from the list.
+ */
 public class Verb {
 
     /** Path to the file containing the list verbs. */
