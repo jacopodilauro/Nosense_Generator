@@ -10,7 +10,7 @@ The project is organized into the following directories:
 * `src/main/java/com/nonsense/lanquageweb/`: contains all the Java source code for the application.
 * `/resources/`: contains application resources.
 * `src/test/java/com/nonsense/lanquageweb/`: houses the unit tests to ensure the application's functionality.
-* `Documents/`: provides detailed documentation, including User Manual, User Stories, System Test Report, Unit Test, Java Doc (in the `doc` folder).
+* `Documents/`: provides detailed documentation, including User Manual, User Stories, System Test Report, Unit Test, JavaDoc (in the `doc` folder open the file `index.html`).
 * `pom.xml`: the Maven Project Object Model file, which manages the project's dependencies and build process.
 
 ## Requirements
