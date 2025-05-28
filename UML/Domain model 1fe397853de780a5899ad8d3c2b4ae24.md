@@ -13,6 +13,8 @@ object "**TemplateFiller**"
 database "**template.txt**"
 }
 
+title \n\n<size:30><font color = black> DOMAIN MODEL \n\n
+
 "**user**" "1    " --[#blue]> "1 " "**SyntaxAnalyzer**" : "inserisce frase \nda analizzare"
 "**SyntaxAnalyzer**" "1  " --[#blue]> "1    " "**Google Cloud API**" : "invia la \nfrase"
 "**SyntaxAnalyzer**" "1" <-[#blue]- "1 " "**Google Cloud API**" : "invia un'analisi \ngrammaticale \ndei token"
