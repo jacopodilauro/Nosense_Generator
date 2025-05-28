@@ -3,7 +3,12 @@
 @startuml
 skinparam handwritten true
 
-class NonsenseApplication {
+
+
+together {
+title \n\n<size:40><font color=black>DESIGN CLASS MODEL\n\n\n\n\n\n\n
+
+class "**NonsenseApplication**" {
 + TEMPLATES_FILE_PATH : String
 + PAST_TENSE_FILE_PATH : String
 + allTemplates : List<String>
@@ -18,29 +23,30 @@ class NonsenseApplication {
 + escapeHtml(s: String): String
 }
 
-class Languagewebapplication {
+class "**Languagewebapplication**" {
 + main(String[] args) : void
 }
 
-class SyntaxAnalyzer {
+
+class "**SyntaxAnalyzer**" {
 + analyzeSyntax(SyntaxResult) : SyntaxResult
 }
 
-class TemplateFiller {
+class "**TemplateFiller**" {
 + fill(String template, List<String> nouns, List<String> verbs, List<String> adjectives, String tense, Map<String, String> verbPasttense) : String
 }
 
-class TemplateSelector {
+class "**TemplateSelector**" {
 + selectCompatibleTemplate(List<String> nouns, List<String> verbs, List<String> adjectives, String templatesFilePath) : String
 }
 
-class SyntaxResult {
+class "**SyntaxResult**" {
 + nouns : List<String>
 + verbs : List<String>
 + adjectives : List<String>
 }
 
-class Adjective {
+class "**Adjective**" {
 FILE_PATH : String
 RANDOM : Random
 + adjectives : List<String>
@@ -51,7 +57,7 @@ RANDOM : Random
 + toString() : String
 }
 
-class Noun {
+class "**Noun**" {
 FILE_PATH : String
 RANDOM : Random
 + nouns : List<String>
@@ -62,7 +68,7 @@ RANDOM : Random
 + toString() : String
 }
 
-class Verb {
+class "**Verb**" {
 FILE_PATH : String
 RANDOM : Random
 + verbs : List<String>
@@ -73,14 +79,14 @@ RANDOM : Random
 + toString() : String
 }
 
-NonsenseApplication .down.> SyntaxAnalyzer
-NonsenseApplication .down.> TemplateFiller
-NonsenseApplication .down.> TemplateSelector
+"**NonsenseApplication**" .down.> "**SyntaxAnalyzer**"
+"**NonsenseApplication**" .down.> "**TemplateFiller**"
+"**NonsenseApplication**" .down.> "**TemplateSelector**"
 
-SyntaxAnalyzer .down.> SyntaxResult
+"**SyntaxAnalyzer**" .down.> "**SyntaxResult**"
 
-TemplateFiller --o Adjective
-TemplateFiller --o Noun
-TemplateFiller --o Verb
+"**TemplateFiller**" --o "**Adjective**"
+"**TemplateFiller**" --o "**Noun**"
+"**TemplateFiller**" --o "**Verb**"
 
 @enduml
