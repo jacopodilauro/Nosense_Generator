@@ -53,3 +53,94 @@ TemplateFiller -> TemplateFiller : replace [adjective] placeholders
 deactivate TemplateFiller
 
 @enduml
+
+TEMPLATESELECTOR
+
+@startuml
+
+participant TemplateSelector
+
+activate TemplateSelector
+
+TemplateSelector -> TemplateSelector : initialize compatible list
+TemplateSelector -> TemplateSelector : compile regex pattern
+
+TemplateSelector -> TemplateSelector : open template file
+loop read each line
+TemplateSelector -> TemplateSelector : match line with pattern
+alt pattern matches
+TemplateSelector -> TemplateSelector : extract n, v, a
+alt nouns.size >= n \nand verbs.size >= v \nand adjectives.size >= a
+TemplateSelector -> TemplateSelector : add line to compatible
+else
+alt all lists are empty
+TemplateSelector -> TemplateSelector : add line to compatible
+end
+end
+end
+end
+
+alt compatible is empty
+TemplateSelector -> TemplateSelector : reopen template file
+loop read each line
+alt line contains " | nouns:"
+TemplateSelector -> TemplateSelector : add line to compatible
+end
+end
+end
+
+deactivate TemplateSelector
+@enduml
+
+NONSENSEAPPLICATION
+
+@startuml
+
+participant "NonsenseApplication" as NA
+
+activate NA
+
+alt sentence != null
+NA -> NA : escapeHtml(sentence)
+end
+
+alt selectedTemplate != null
+NA -> NA : escapeHtml(templateToUse)
+end
+
+NA -> NA : appendToFile(...) [chiamata da addNoun/addVerb/addAdjective]
+
+NA -> NA : escapeHtml(word) [usato nei messaggi HTML]
+
+NA -> NA : write sentenceOut to output.txt
+
+deactivate NA
+@enduml
+
+SYNTAXANALYZER
+
+@startuml
+participant "SyntaxAnalyzer" as Analyzer
+
+Analyzer -> Analyzer: crea liste nouns, verbs, adjectives
+Analyzer -> Analyzer: crea LanguageServiceClient (try-with-resources)
+Analyzer -> Analyzer: costruisci Document (setContent, setType, build)
+Analyzer -> Analyzer: chiama analyzeSyntax(doc)
+Analyzer -> Analyzer: ottieni lista Tokens
+
+loop per ogni Token
+Analyzer -> Analyzer: getText().getContent()  // parola
+Analyzer -> Analyzer: getPartOfSpeech().getTag()  // tag
+alt tag == NOUN
+Analyzer -> Analyzer: aggiungi parola a nouns
+else tag == VERB e parola != "will"
+Analyzer -> Analyzer: aggiungi parola a verbs
+else tag == ADJ
+Analyzer -> Analyzer: aggiungi parola a adjectives
+else
+Analyzer -> Analyzer: ignora
+end
+end
+
+Analyzer -> Analyzer: crea e restituisci SyntaxResult(nouns, verbs, adjectives)
+@enduml
