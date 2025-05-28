@@ -1,11 +1,3 @@
-/**
- * The {@code Adjective} class represents a randomly selected adjective from a file.
- * <p>
- * Adjectives are loaded from the file {@code adjective.txt}, where each line contains a single adjective.
- * The list is loaded only once and shared across all instances for performance.
- * Each instance of {@code Adjective} stores one randomly chosen adjective from the list.
- */
-
 package com.nonsense.languageweb;
 
 import java.io.IOException;
@@ -14,6 +6,13 @@ import java.nio.file.Paths;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * The {@code Adjective} class represents a randomly selected adjective from a file.
+ * <p>
+ * Adjectives are loaded from the file {@code adjective.txt}, where each line contains a single adjective.
+ * The list is loaded only once and shared across all instances for performance.
+ * Each instance of {@code Adjective} stores one randomly chosen adjective from the list.
+ */
 public class Adjective {
    /** Path to the file containing the list of adjectives. */
     private static final String FILE_PATH = "resources/adjectives.txt";
