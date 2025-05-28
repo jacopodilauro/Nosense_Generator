@@ -1,11 +1,3 @@
-/**
- * The {@code Noun} class represents a randomly selected noun from a file.
- * <p>
- * Nouns are loaded from the file {@code nouns.txt}, where each line contains a single noun.
- * The list is loaded only once and shared across all instances for performance.
- * Each instance of {@code Noun} stores one randomly chosen noun from the list.
- */
-
 package com.nonsense.languageweb;
 
 import java.io.IOException;
@@ -14,6 +6,13 @@ import java.nio.file.Paths;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * The {@code Noun} class represents a randomly selected noun from a file.
+ * <p>
+ * Nouns are loaded from the file {@code nouns.txt}, where each line contains a single noun.
+ * The list is loaded only once and shared across all instances for performance.
+ * Each instance of {@code Noun} stores one randomly chosen noun from the list.
+ */
 public class Noun {
 
     /** Path to the file containing the list of nouns. */
