@@ -17,7 +17,7 @@ The project is organized into the following directories:
 
 To set up and run the Nonsense Generator, ensure you have the following installed:
 
-* Download the `.json` file of the google API key that you can generate from Google Cloud Console, in the "Credentials" section of the project.
+* Download the c.json` file of the google API key that you can generate from Google Cloud Console, in the "Credentials" section of the project.
 * Java Development Kit (JDK) 17 or higher. You can check your version by running `java -version` in your terminal.
 * Maven 3.6+. Verify your installation with `mvn -v`.
 
@@ -63,13 +63,13 @@ In the terminal, ensuring you are in the project's root directory, run the follo
     export GOOGLE_APPLICATION_CREDENTIALS="$PWD/src/main/resources/google-key.json"
   ```
 
-## Run th project
+## Run the project
 
 Use:
  ```bash
    mvn spring−boot:run
  ```
-Once the application has started successfully (you should see a message similar to Started LanguagewebApplication in *X* seconds in the terminal log), it will be accessible via a web
+Once the application has started successfully (you should see a message similar to `Started LanguagewebApplication in *X* seconds` in the terminal log), it will be accessible via a web
 browser at:
 https://localhost:8080
 
