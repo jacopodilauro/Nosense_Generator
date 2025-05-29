@@ -1,0 +1,25 @@
+@startuml
+
+title \n\n<font color = black><size:20> NONSENSEAPPLICATION \n<font color = black><size:12> INTERNAL SEQUENCE DIAGRAM\n\n
+
+participant "**NonsenseApplication**" as NA #dodgerblue
+
+activate NA #dodgerblue
+
+alt frase != null
+NA -[#blue]> NA : esegue escapeHtml(frase)
+end
+
+alt selectedTemplate != null
+NA -[#blue]> NA : esegue escapeHtml(template da usare)
+end
+
+NA -[#blue]> NA : appendToFile(...) [chiamata da addNoun/addVerb/addAdjective]
+
+NA -[#blue]> NA : escapeHtml(parola) [usato nei messaggi HTML]
+
+NA -[#blue]> NA : scrive sentenceOut su output.txt
+
+deactivate NA
+
+@enduml

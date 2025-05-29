@@ -1,0 +1,38 @@
+@startuml
+
+
+title \n\n<font color = black><size:22> TEMPLATESELECTOR \n <font color = black><size:12> INTERNAL SEQUENCE DIAGRAM \n\n
+
+participant "**TemplateSelector**" #dodgerblue
+
+activate "**TemplateSelector**" #dodgerblue
+
+"**TemplateSelector**" -[#blue]> "**TemplateSelector**" : inizializza la lista compatibile
+"**TemplateSelector**" -[#blue]> "**TemplateSelector**" : compila il pattern regex
+
+"**TemplateSelector**" -[#blue]> "**TemplateSelector**" : apre il file dei template
+loop leggi ogni riga
+"**TemplateSelector**" -[#blue]> "**TemplateSelector**" : confronta la riga con il pattern
+alt il pattern corrisponde
+"**TemplateSelector**" -[#blue]> "**TemplateSelector**" : estrae n, v, a
+alt nouns.size >= n \n \verbs.size >= v \n \adjectives.size >= a
+"**TemplateSelector**" -[#blue]> "**TemplateSelector**" : aggiunge la riga alla lista compatibile
+else
+alt tutte le liste sono vuote
+"**TemplateSelector**" -[#blue]> "**TemplateSelector**" : aggiunge la riga alla lista compatibile
+end
+end
+end
+end
+
+alt lista compatibile vuota
+"**TemplateSelector**" -[#blue]> "**TemplateSelector**" : riapre il file dei template
+loop leggi ogni riga
+alt la riga contiene " | nouns:"
+"**TemplateSelector**" -[#blue]> "**TemplateSelector**" : aggiunge la riga alla lista compatibile
+end
+end
+end
+
+deactivate "**TemplateSelector**"
+@enduml
