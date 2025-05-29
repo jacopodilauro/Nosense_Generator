@@ -1,4 +1,4 @@
-# Nonsense Generator
+ # 🎲Nonsense Generator
 
 ## Introduction
 The Nonsense Generator is a Java-based web application designed to create "nonsense" sentences. It achieves this by analyzing user-provided text to extract relevant words (nouns, verbs, and adjectives) and then using these, or randomly selected words from its dictionaries to eventually fill blank spaces, to fill pre-defined sentence templates. The application makes use of the Google Cloud Language API for advanced linguistic analysis, including syntax analysis and content moderation, ensuring generated sentences are within acceptable content boundaries.
