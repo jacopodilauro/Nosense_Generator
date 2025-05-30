@@ -29,7 +29,7 @@ class NonsenseApplicationTests {
     private MockMvc mockMvc;
 
     @BeforeAll
-    static void setUpAll() throws IOException {
+    /*static void setUpAll() throws IOException {
         Path resourcesDir = Paths.get("resources");
         if (!Files.exists(resourcesDir)) {
             Files.createDirectories(resourcesDir);
@@ -40,7 +40,7 @@ class NonsenseApplicationTests {
         Files.write(resourcesDir.resolve("nouns.txt"), Collections.emptyList(), StandardOpenOption.CREATE);
         Files.write(resourcesDir.resolve("adjectives.txt"), Collections.emptyList(), StandardOpenOption.CREATE);
         Files.write(resourcesDir.resolve("verbs.txt"), Collections.emptyList(), StandardOpenOption.CREATE);
-    }
+    }*/
 
     @AfterAll
     static void tearDownAll() throws IOException {
@@ -48,8 +48,8 @@ class NonsenseApplicationTests {
         if (Files.exists(resourcesDir)) {
             Files.walk(resourcesDir)
                     .sorted(Comparator.reverseOrder())
-                    .map(Path::toFile)
-                    .forEach(File::delete);
+                    .map(Path::toFile);
+                    //.forEach(File::delete);
         }
     }
 
