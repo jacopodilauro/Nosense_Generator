@@ -10,28 +10,47 @@ import java.util.List;
 
 class AdjectiveTest {
 
-    @BeforeAll
-    static void initAll() {
-        // Prepara un file di risorse di test con aggettivi
+    private static final Path RESOURCES_DIR = Paths.get("resources");
+    private static final Path ORIGINAL_ADJ_FILE = RESOURCES_DIR.resolve("adjectives.txt");
+    private static final Path TEMP_ADJ_FILE = RESOURCES_DIR.resolve("adjectives-temp.txt");
+
+    @BeforeEach
+    void setUp() {
         try {
-            Path dir = Paths.get("resources");
-            if (!Files.exists(dir)) Files.createDirectories(dir);
-            Files.write(Paths.get("resources/adjectives.txt"), List.of("rosso", "grande", "veloce"));
+            if (!Files.exists(RESOURCES_DIR)) {
+                Files.createDirectories(RESOURCES_DIR);
+            }
+
+            // Se esiste il file originale, lo salviamo in temporaneo
+            if (Files.exists(ORIGINAL_ADJ_FILE)) {
+                Files.copy(ORIGINAL_ADJ_FILE, TEMP_ADJ_FILE, StandardCopyOption.REPLACE_EXISTING);
+            } else {
+                // Se non esiste, creiamo direttamente il file temporaneo con contenuto di test
+                Files.write(TEMP_ADJ_FILE, List.of("rosso", "grande", "veloce"));
+            }
+
+            // Sovrascriviamo il file originale per i test
+            Files.copy(TEMP_ADJ_FILE, ORIGINAL_ADJ_FILE, StandardCopyOption.REPLACE_EXISTING);
+
         } catch (IOException e) {
-            fail("Setup fallito: " + e.getMessage());
+            fail("Errore nel setup: " + e.getMessage());
         }
     }
 
-    @AfterAll
-    static void tearDownAll() {
+    @AfterEach
+    void tearDown() {
         try {
-            Files.deleteIfExists(Paths.get("resources/adjectives.txt"));
+            // Ripristiniamo il file originale da quello temporaneo
+            if (Files.exists(TEMP_ADJ_FILE)) {
+                Files.copy(TEMP_ADJ_FILE, ORIGINAL_ADJ_FILE, StandardCopyOption.REPLACE_EXISTING);
+                Files.deleteIfExists(TEMP_ADJ_FILE);
+            }
         } catch (IOException ignored) {}
     }
 
     @Test
     void testGetWordNotNullOrEmpty() throws IOException {
-        Adjective adj = new Adjective();
+        Adjective adj = new Adjective();  // Usa il file adjectives.txt
         String word = adj.getWord();
         assertNotNull(word);
         assertFalse(word.isBlank());
@@ -43,4 +62,5 @@ class AdjectiveTest {
         assertEquals(adj.getWord(), adj.toString());
     }
 }
+
 
