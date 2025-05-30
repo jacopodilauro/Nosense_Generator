@@ -1,0 +1,59 @@
+User:
+
+- L'utente inserisce una frase da analizzare.
+
+SyntaxAnalyzer:
+
+- Riceve la frase dall'utente.
+
+- Invia la frase alla Google Cloud API per eseguire un’analisi grammaticale.
+
+- Riceve dalla Google Cloud API i token grammaticali.
+
+- Produce un SyntaxResult con i risultati dell’analisi.
+
+Google Cloud API:
+
+- Esegue l’analisi grammaticale della frase (tokenizzazione, riconoscimento di verbi, nomi, aggettivi).
+
+- Restituisce i risultati al SyntaxAnalyzer.
+
+SyntaxResult :
+
+- Oggetto contenente tre liste: nouns, verbs e adjectives.
+
+- Le tre liste vengono inviate sia al TemplateSelector che al TemplateFiller.
+
+TemplateSelector :
+
+- Riceve le liste linguistiche da SyntaxResult.
+
+- Legge e seleziona un template compatibile da un archivio di file template.txt.
+
+- Passa il template selezionato al TemplateFiller.
+
+template.txt :
+
+- Archivio di template testuali predefiniti.
+
+- Il TemplateSelector può leggere uno o più di questi template (relazione 0..*).
+
+TemplateFiller :
+
+- Riceve sia le liste linguistiche che il template selezionato.
+
+- Ottiene dalla NonsenseApplication il tempo verbale da usare e una mappa dei verbi coniugati.
+
+- Utilizza tutte queste informazioni per generare una frase finale coerente.
+
+- Restituisce la frase generata all’user.
+
+NonsenseApplication
+
+- Fornisce supporto linguistico: tempo verbale selezionato e mappa dei verbi coniugati.
+
+- Collabora con il TemplateFiller per assicurare coerenza grammaticale.
+
+User:
+
+- L'utente riceve infine una nuova frase generata a partire da template e analisi linguistica.
