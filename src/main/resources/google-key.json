@@ -1,13 +1,1 @@
-{
-  "type": "service_account",
-  "project_id": "nifty-stage-459014-a2",
-  "private_key_id": "73bb69e7e5fd8c3099540da206d189e0919ae3ba",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCg8uuT5WASaruE\n25p1x+uHI3QTH5butzWUntVv3k5ZmYxj5sqW3I/sW6EXAAAQhjsCTbj2P090BlG8\nd5kOHdWXd/MuBWDF742QXWf+RYDPyf2yWPVlsa+WoeQy+ImpJEw4FO/gdcjxk6CG\n+lKMs1xpToJjHD1+345XPx9kpADiM7SfjzqZq+0G9McLYUjRI7FOyhBhh3sOijd5\n3Yajr+41JDUV2l7HqG6NHWp1iHiOUYGTqPLHPyoUzJXdybsEIN/kEYuFmwTfzA4w\n+QA/qCD4e1UF1Ayqc9/BKwITdCrMPmrDca+589Ea0Kumr/oGc//anyzGl8iGNzQO\nh645D5GdAgMBAAECggEAH8mKZGXPcSO6UFWM7okjB8glQyegiBoQD3/FOLhnsgOE\n+jAZP+1k0XIRYTkDSkAwhFZ0WtILL6eV2gqm5GZZCnbKxQKT59PVmjcQdGQmuiMz\nI1e1c7XBr5beuoBis9Cy6vqbm7G3k5qsACyNRDOiYzv5vXhU3utpMesKGLbZY9Mw\n7Rn7kMMAsW3cUZgLvbm5suD/FnQM5dqnXnozEMK1TBTJXPRG1ez7yWNFYO9XmxxT\nitOCMepdMoYxHzwtsIeIL51quMBxAvCJ5M60TsPRl8NAzlvEnc3G2VPJLo+xwj+v\n3jPplx10/xy/c6crOcY+7LKs5vuprRwXrHHOTmVwcwKBgQDeQ6WT6TFx6ydrtg7a\nGNjoBJehiJs5mDrngAfVJM90mWmiH/ojMS9NUGUjGyPidx+Qg5cv5Fb0BRX78gNX\n/6BDcYxaHYAAjSHjpJ+6Yh6g2IqWRPude6EabQ8GRdNwm2/LTBQFreLLz4aTw3dY\ndAXios+sV7FopOplCC5aUuAYywKBgQC5YMozTFHoG6SUN2uBNQtRv3fnolyediF7\nU8jyBeNFw4VhqxJdbKVM5nc2fPDxJArbVVT1H+l3AWpxMGjTwm2/j42AyxUoRbL2\nABvmD2A3VtF5baMGCkuDnPrLpWvLWXPZJtpXNI/B8p5eA22AN5HAKZF3FbfpiAuY\nGY3VhZz6NwKBgC6Jh2+y0dGCZRyeX/m2XiQmYgFGcwnaH+s82Wb9cBp/zKhPfbZE\npBzSCnsRQbA3NPqzMsKqUrKBJhs8jwqr0UiNy89KgfSbmE7rty31QWh4LnxMMUrG\nCfNYhl7P2/el9ABjC4Ys5GG8L/dcY+63TEwpvsXdDp5UeWdyERKEa7uFAoGAbMvo\nf+jX3VBz6+UGvCMkjIrB1XlNwFZ2WgoXUiuwch5JJsQfGCOOdC6CYsE7K1tK3+UZ\n4m8jNwvmq52MuFNQ0+9tTdxig2s8l/ICbagygOf8Mrbsybu7C/hSnLhuJj9OpXCP\nDkUz5dD9rxF1750tdkkvLWPatz14CIFe46TyN0sCgYEA0K3UmtLjLif73BubYwug\ncpKYmjQqn/66eg4arVoODVyNlRRvMoSMC8jR2TO6/+gxHVz9olOmPudxmLbkS4bs\nRh3F4sNyHdMxB+7rAliSUStEyb1ClPL+E0I7KVJXjp9btz/d1IrJzS+eiSBsdB0U\nvtI8JJENett7ZO7iENIHjH0=\n-----END PRIVATE KEY-----\n",
-  "client_email": "natural-language-service-accou@nifty-stage-459014-a2.iam.gserviceaccount.com",
-  "client_id": "104183195496017130578",
-  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-  "token_uri": "https://oauth2.googleapis.com/token",
-  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/natural-language-service-accou%40nifty-stage-459014-a2.iam.gserviceaccount.com",
-  "universe_domain": "googleapis.com"
-}
+
