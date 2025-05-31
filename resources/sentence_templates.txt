@@ -10,7 +10,7 @@
 10. The [noun] [verb] while the [noun] [verb]. | nouns:2, verbs:2, adjectives:0
 11. Between the [noun], the [adjective] [noun] [verb]. | nouns:2, verbs:1, adjectives:1
 12. Every [noun] [verb] in a [adjective] way. | nouns:1, verbs:1, adjectives:1
-13. A [noun] by the [noun] [verb] [adverb]. | nouns:2, verbs:1, adjectives:0
+13. A [noun] by the [noun] [verb]. | nouns:2, verbs:1, adjectives:0
 14. Though [adjective], the [noun] still [verb] bravely. | nouns:1, verbs:1, adjectives:1
 15. [adjective] [noun] never [verb] without a [noun]. | nouns:2, verbs:1, adjectives:1
 16. Once, a [noun] [verb] a [noun] under the [adjective] moon. | nouns:2, verbs:1, adjectives:1
@@ -18,7 +18,7 @@
 18. A [noun] and an [adjective] [noun] [verb] softly. | nouns:2, verbs:1, adjectives:1
 19. Every time the [noun] [verb], a [noun] [verb] too. | nouns:2, verbs:2, adjectives:0
 20. Never [verb] a [adjective] [noun] on a [noun]. | nouns:2, verbs:1, adjectives:1
-21. The [noun] [adverb] [verb] with the [adjective] [noun]. | nouns:2, verbs:1, adjectives:1
+21. The [noun] [verb] with the [adjective] [noun]. | nouns:2, verbs:1, adjectives:1
 22. After the [noun] [verb], a [noun] [verb] too. | nouns:2, verbs:2, adjectives:0
 23. A [adjective] [noun] [verb] because the [noun] [verb]. | nouns:2, verbs:2, adjectives:1
 24. Each [noun] [verb] differently  a [adjective] storm. | nouns:1, verbs:1, adjectives:1
@@ -26,7 +26,7 @@
 26. As the [noun] [verb], the [noun] [verb] back. | nouns:2, verbs:2, adjectives:0
 27. The [noun] [verb] the [noun] with [adjective] elegance. | nouns:2, verbs:1, adjectives:1
 28. In a [noun], the [noun] [verb] the [adjective] [noun]. | nouns:3, verbs:1, adjectives:1
-29. The [adjective] [noun] [adverb] [verb] through the [noun]. | nouns:2, verbs:1, adjectives:1
+29. The [adjective] [noun] [verb] through the [noun]. | nouns:2, verbs:1, adjectives:1
 30. Sometimes, the [noun] just [verb] with no reason. | nouns:1, verbs:1, adjectives:0
 31. Only a [noun] would [verb] in a [adjective] [noun]. | nouns:2, verbs:1, adjectives:1
 32. If the [noun] [verb] first, the [noun] [verb] later. | nouns:2, verbs:2, adjectives:0
@@ -34,13 +34,13 @@
 34. Even the [noun] [verb] the [noun] once. | nouns:2, verbs:1, adjectives:0
 35. What if the [adjective] [noun] [verb] today? | nouns:1, verbs:1, adjectives:1
 36. The [noun] [verb] the [noun] with [adjective] flair. | nouns:2, verbs:1, adjectives:1
-37. Through the [noun], the [noun] [verb] [adverb]. | nouns:2, verbs:1, adjectives:0
+37. Through the [noun], the [noun] [verb]. | nouns:2, verbs:1, adjectives:0
 38. Whenever [noun] [verb], a [noun] [verb] too. | nouns:2, verbs:2, adjectives:0
 39. Both [noun] [verb] the [adjective] [noun]. | nouns:2, verbs:1, adjectives:1
 40. Neither the [adjective] [noun] nor the [noun] [verb]. | nouns:2, verbs:1, adjectives:1
 41. A [noun] once [verb] into a [adjective] [noun]. | nouns:2, verbs:1, adjectives:1
 42. The [noun] [verb] around the [adjective] [noun] at night. | nouns:2, verbs:1, adjectives:1
-43. Near the [noun], the [noun] [verb] [adverb]. | nouns:2, verbs:1, adjectives:0
+43. Near the [noun], the [noun] [verb]. | nouns:2, verbs:1, adjectives:0
 44. The [noun] [verb] just before the [adjective] [noun] . | nouns:2, verbs:1, adjectives:1
 45. The [noun] [verb] with the [noun] on weekends. | nouns:2, verbs:1, adjectives:0
 46. This [adjective] [noun] always [verb] the [noun]. | nouns:2, verbs:1, adjectives:1
@@ -65,11 +65,11 @@
 65. The [noun] [verb] the reason the [adjective] [noun] [verb]. | nouns:2, verbs:2, adjectives:1
 66. No [adjective] [noun] [verb] a [noun] [preposition] another [noun]. | nouns:3, verbs:1, adjectives:1, prepositions:1
 67. Where the [noun] [verb], an [adjective] [noun] also [verb]. | nouns:2, verbs:2, adjectives:1
-68. After [verb]ing the [noun], the [adjective] [noun] [verb] [adverb]. | nouns:2, verbs:2, adjectives:1, adverbs:1
+68. After [verb]ing the [noun], the [adjective] [noun] [verb]. | nouns:2, verbs:2, adjectives:1
 69. The [adjective] [noun] [verb] to [verb] the [noun]. | nouns:2, verbs:2, adjectives:1
 70. Who [verb] the [adjective] [noun] across the [noun]? | nouns:2, verbs:1, adjectives:1
-71. Sometimes a [noun] [verb] the [adjective] [noun] quite [adverb]. | nouns:2, verbs:1, adjectives:1, adverbs:1
-72. Without an [adjective] [noun], the [noun] [verb] [adverb]. | nouns:2, verbs:1, adjectives:1, adverbs:1
+71. Sometimes a [noun] [verb] the [adjective] [noun]. | nouns:2, verbs:1, adjectives:1
+72. Without an [adjective] [noun], the [noun] [verb]. | nouns:2, verbs:1, adjectives:1
 73. A [noun] [verb] a [noun] on the [adjective] hill. | nouns:2, verbs:1, adjectives:1 
 74. Rarely, an [adjective] [noun] [verb] a [noun]. | nouns:2, verbs:1, adjectives:1 
 75. What [noun] [verb] the [adjective] [noun] toward the [noun]? | nouns:3, verbs:1, adjectives:1
@@ -81,18 +81,18 @@
 81. Despite the [adjective] sky, the [noun] [verb] onward. | nouns:1, verbs:1, adjectives:1 
 82. The [noun] [verb] to [verb] the [adjective] [noun] before dawn. | nouns:2, verbs:2, adjectives:1 
 83. If only the [noun] [verb past subjunctive] the [noun]! | nouns:2, verbs:1 
-85. Few [noun]s [verb] like the [adjective] [noun]. | nouns:2, verbs:1, adjectives:1 
-86. Someone [verb] an [adjective] [noun] for [noun]. | nouns:2, verbs:1, adjectives:1
-87. An [adjective] [noun] [verb] to [verb] a [noun] so well. | nouns:2, verbs:2, adjectives:1 
-88. Suddenly, an [adjective] [noun] [verb] to [verb]. | nouns:1, verbs:2, adjectives:1 
-89. Someone [verb] an [adjective] [noun] on [noun]s. | nouns:2, verbs:1, adjectives:1
-90. Although [adjective], the [noun] [verb] to [verb]. | nouns:1, verbs:2, adjectives:1
-91. Never [verb] a [noun] such an [adjective] [noun]. | nouns:2, verbs:1, adjectives:1 
-92. Where the [adjective] [noun] [verb], [noun]s [verb]. | nouns:2, verbs:2, adjectives:1
-93. Even after [verb]ing, the [noun] seems [adjective]. | nouns:1, verbs:1, adjectives:1 
-94. Whenever a [noun] [verb], another [noun] [verb] [adverb]. | nouns:2, verbs:2, adverbs:1
-95. When the [noun] [verb] the [noun], the [adjective] [noun] [verb]. | nouns:3, verbs:2, adjectives:1
-96. Only the [adjective] [noun] [verb] a [noun] like that. | nouns:2, verbs:1, adjectives:1 
-97. If a [noun] [verb], the [adjective] [noun] [verb] [adverb]. | nouns:2, verbs:2, adjectives:1, adverbs:1
-98. An [adjective] [noun] [verb] with an [adjective] [noun] for a [noun]. | nouns:3, verbs:1, adjectives:2
-99. While an [adjective] [noun] [verb], its [adjective] [noun] [verb] the [adjective] [noun]s near the [adjective] [noun]. | nouns:5, verbs:2, adjectives:4
+84. Few [noun]s [verb] like the [adjective] [noun]. | nouns:2, verbs:1, adjectives:1 
+85. Someone [verb] an [adjective] [noun] for [noun]. | nouns:2, verbs:1, adjectives:1
+86. An [adjective] [noun] [verb] to [verb] a [noun] so well. | nouns:2, verbs:2, adjectives:1 
+87. Suddenly, an [adjective] [noun] [verb] to [verb]. | nouns:1, verbs:2, adjectives:1 
+88. Someone [verb] an [adjective] [noun] on [noun]s. | nouns:2, verbs:1, adjectives:1
+89. Although [adjective], the [noun] [verb] to [verb]. | nouns:1, verbs:2, adjectives:1
+90. Never [verb] a [noun] such an [adjective] [noun]. | nouns:2, verbs:1, adjectives:1 
+91. Where the [adjective] [noun] [verb], [noun]s [verb]. | nouns:2, verbs:2, adjectives:1
+92. Even after [verb]ing, the [noun] seems [adjective]. | nouns:1, verbs:1, adjectives:1 
+93. Whenever a [noun] [verb], another [noun] [verb]. | nouns:2, verbs:2
+94. When the [noun] [verb] the [noun], the [adjective] [noun] [verb]. | nouns:3, verbs:2, adjectives:1
+95. Only the [adjective] [noun] [verb] a [noun] like that. | nouns:2, verbs:1, adjectives:1 
+96. If a [noun] [verb], the [adjective] [noun] [verb]. | nouns:2, verbs:2, adjectives:1
+97. An [adjective] [noun] [verb] with an [adjective] [noun] for a [noun]. | nouns:3, verbs:1, adjectives:2
+98. While an [adjective] [noun] [verb], its [adjective] [noun] [verb] the [adjective] [noun]s near the [adjective] [noun]. | nouns:5, verbs:2, adjectives:4
