@@ -69,19 +69,18 @@
 69. The [adjective] [noun] [verb] to [verb] the [noun]. | nouns:2, verbs:2, adjectives:1
 70. Who [verb] the [adjective] [noun] across the [noun]? | nouns:2, verbs:1, adjectives:1
 71. Sometimes a [noun] [verb] the [adjective] [noun] quite [adverb]. | nouns:2, verbs:1, adjectives:1, adverbs:1
-72. Without an [adjective] [noun], the [other noun] [verb] [adverb]. | nouns:2, verbs:1, adjectives:1, adverbs:1
+72. Without an [adjective] [noun], the [noun] [verb] [adverb]. | nouns:2, verbs:1, adjectives:1, adverbs:1
 73. A [noun] [verb] a [noun] on the [adjective] hill. | nouns:2, verbs:1, adjectives:1 
 74. Rarely, an [adjective] [noun] [verb] a [noun]. | nouns:2, verbs:1, adjectives:1 
 75. What [noun] [verb] the [adjective] [noun] toward the [noun]? | nouns:3, verbs:1, adjectives:1
 76. An [adjective] [noun] [verb] away from the [noun]. | nouns:2, verbs:1, adjectives:1
-77. The [noun] [verb] if the [other noun] [verb] that [adjective] [noun]. | nouns:3, verbs:2, adjectives:1
+77. The [noun] [verb] if the [noun] [verb] that [adjective] [noun]. | nouns:3, verbs:2, adjectives:1
 78. Many [noun]s [verb] under an [adjective] [noun]. | nouns:2, verbs:1, adjectives:1
-79. As [adjective] as the [noun] [verb], the [other noun] [verb] too. | nouns:2, verbs:2, adjectives:1
-80. Until the [noun] [verb], the [other noun] remains [adjective]. | nouns:2, verbs:1, adjectives:1 
+79. As [adjective] as the [noun] [verb], the [noun] [verb] too. | nouns:2, verbs:2, adjectives:1
+80. Until the [noun] [verb], the [noun] remains [adjective]. | nouns:2, verbs:1, adjectives:1 
 81. Despite the [adjective] sky, the [noun] [verb] onward. | nouns:1, verbs:1, adjectives:1 
 82. The [noun] [verb] to [verb] the [adjective] [noun] before dawn. | nouns:2, verbs:2, adjectives:1 
 83. If only the [noun] [verb past subjunctive] the [noun]! | nouns:2, verbs:1 
-84. The [adjective] [noun] [verb] while [verb]ing a [noun]. | nouns:2, verbs:2, adjectives:1
 85. Few [noun]s [verb] like the [adjective] [noun]. | nouns:2, verbs:1, adjectives:1 
 86. Someone [verb] an [adjective] [noun] for [noun]. | nouns:2, verbs:1, adjectives:1
 87. An [adjective] [noun] [verb] to [verb] a [noun] so well. | nouns:2, verbs:2, adjectives:1 
